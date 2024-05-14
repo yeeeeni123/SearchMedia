@@ -7,7 +7,6 @@ import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 class SearchRepositoryImpl(private val service: SearchService) : SearchRepository {
-
     override fun search(query: String): Observable<List<ListItem>> {
         return service.searchImage(query)
             .zipWith(service.searchVideo(query)) { imageResult, videoResult ->

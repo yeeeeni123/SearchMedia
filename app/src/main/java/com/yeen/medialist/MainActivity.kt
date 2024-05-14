@@ -20,11 +20,9 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
     private val searchFragment = SearchFragment()
     private val fragments = listOf(searchFragment, FavoritesFragment())
     private val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle, fragments)
-
     private var observableTextQuery : Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

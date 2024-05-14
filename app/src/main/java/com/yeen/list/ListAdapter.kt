@@ -43,6 +43,8 @@ class ListAdapter(private val itemHandler: ItemHandler? = null) :
         }
     }
 
+
+    //자동으로 갱신
     companion object {
         private const val IMAGE = 0
         private const val VIDEO = 1
